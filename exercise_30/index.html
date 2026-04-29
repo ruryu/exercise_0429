@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #text { color: black; font-size: 24px; }
+    </style>
+</head>
+<body>
+
+    <p id="text">Hello</p>
+    <button id="btn">Button</button>
+
+    <script>
+        const text = document.getElementById('text');
+        const btn = document.getElementById('btn');
+
+        // 滑鼠移入：顏色變粉紅
+        btn.onmouseover = function() {
+            text.style.color = 'magenta';
+            text.innerHTML = 'Hello';
+        };
+
+        // 滑鼠移出：恢復黑色 (選配)
+        btn.onmouseout = function() {
+            text.style.color = 'black';
+        };
+
+        // 滑鼠點擊：文字改變
+        btn.onclick = function() {
+            text.innerHTML = 'Mouse Click';
+            text.style.color = 'magenta';
+        };
+    </script>
+
+</body>
+</html>
